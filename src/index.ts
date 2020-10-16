@@ -22,24 +22,49 @@
 
 //
 
-interface Human {
-  name: string;
-  age: number;
-  gender: string;
+// interface Human {
+//   name: string;
+//   age: number;
+//   gender: string;
+// }
+
+// const person = {
+//   name: "nicolas",
+//   age: 22,
+//   gender: "male"
+// };
+
+// const sayHi = (person: Human): string => {
+//   return `Hello ${person.name}, you are ${person.age}, you are a ${
+//     person.gender
+//   }!`;
+// };
+
+// console.log(sayHi(person));
+
+// export {};
+
+//
+
+class Human {
+  public name: string;
+  private age: number;
+  public gender: string;
+  constructor(name: string, age: number, gender: string) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
 }
+  
+const lynn = new Human("Lynn", 18, "female");
 
-const person = {
-  name: "nicolas",
-  age: 22,
-  gender: "male"
-};
-
-const sayHi = (person: Human): string => {
-  return `Hello ${person.name}, you are ${person.age}, you are a ${
-    person.gender
-  }!`;
-};
-
-console.log(sayHi(person));
-
-export {};
+  const sayHi = (lynn: Human): string => {
+    return `Hello ${lynn.name}, you are ${lynn}, you are a ${
+      lynn.gender
+    }!`;
+  };
+  
+  console.log(sayHi(lynn));
+  
+  export {};
